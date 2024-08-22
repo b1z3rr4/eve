@@ -1,0 +1,133 @@
+// Importando fontes do Google
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+// Reset CSS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+  color: #2d3436;
+  background-color: #f7f7f7;
+}
+
+// Cores
+$primary: #0077b6;
+$secondary: #ffba08;
+$background: #f7f7f7;
+$surface: #ffffff;
+$accent: #00b894;
+$text: #2d3436;
+$muted-text: #636e72;
+$error: #d63031;
+$border: #E6E6E6;
+
+// Tipografia - Poppins
+$poppins-font: "Poppins", sans-serif;
+$poppins-weight: (
+  400: 400,
+  500: 500,
+  600: 600,
+  700: 700,
+);
+$poppins-size: 16px;
+$poppins-line-height: 1.5;
+$poppins-letter-spacing: 0.3px;
+
+// Tipografia - Roboto
+$roboto-font: "Roboto", sans-serif;
+$roboto-weight: (
+  300: 300,
+  400: 400,
+  500: 500,
+);
+$roboto-size: 16px;
+$roboto-line-height: 1.5;
+$roboto-letter-spacing: 0.5px;
+
+:root {
+  --primary-color: #{$primary};
+  --secondary-color: #{$secondary};
+  --background-color: #{$background};
+  --surface-color: #{$surface};
+  --accent-color: #{$accent};
+  --text-color: #{$text};
+  --muted-text-color: #{$muted-text};
+  --error-color: #{$error};
+  --border-color: #{$border};
+
+  --poppins-font: #{$poppins-font};
+  --poppins-size: #{$poppins-size};
+  --poppins-line-height: #{$poppins-line-height};
+  --poppins-letter-spacing: #{$poppins-letter-spacing};
+
+  --roboto-font: #{$roboto-font};
+  --roboto-size: #{$roboto-size};
+  --roboto-line-height: #{$roboto-line-height};
+  --roboto-letter-spacing: #{$roboto-letter-spacing};
+}
+
+// Estilos Gerais
+body {
+  font-family: $poppins-font;
+  font-size: $poppins-size;
+  line-height: $poppins-line-height;
+  letter-spacing: $poppins-letter-spacing;
+  color: $text;
+  background-color: $background;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $poppins-font;
+}
+
+p,
+span,
+a,
+button {
+  font-family: $roboto-font;
+  font-size: $roboto-size;
+  line-height: $roboto-line-height;
+  letter-spacing: $roboto-letter-spacing;
+}
+
+button {
+  background-color: $primary;
+  color: $surface;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $accent;
+  }
+}
+
+.alert-error {
+  color: $error;
+  background-color: $surface;
+  padding: 10px;
+  border-left: 4px solid $error;
+}
+
+.text-muted {
+  color: $muted-text;
+}
