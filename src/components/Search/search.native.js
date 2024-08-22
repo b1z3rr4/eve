@@ -1,4 +1,4 @@
-class SearchHeader extends HTMLElement {
+class SearchElement extends HTMLElement {
     constructor() {
         super();
         this.build();
@@ -121,4 +121,4 @@ class SearchHeader extends HTMLElement {
     }
 }
 
-export default SearchHeader;
+export default SearchElement;

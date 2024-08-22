@@ -1,6 +1,6 @@
 import { LitElement, html, css } from 'lit';
 
-class SearchHeader extends LitElement {
+class SearchElement extends LitElement {
     static properties = {
         location: {},
     };
@@ -81,4 +81,4 @@ class SearchHeader extends LitElement {
     }
 }
 
-export default SearchHeader;
+export default SearchElement;
