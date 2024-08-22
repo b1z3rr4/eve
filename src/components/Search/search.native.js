@@ -21,7 +21,7 @@ class SearchHeader extends HTMLElement {
         return `
             <div class="search-container">
                 <input type="text" placeholder="Pesquisar por eventos..." class="border-radius-left" />
-                <input type="text" placeholder="Localização" value="${this.location}" />
+                <input type="text" placeholder="Localização" value="${this.location}" disabled />
                 <button class="border-radius-right">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
                         <path d="M10.5 2a8.5 8.5 0 1 0 6.832 13.148l5.23 5.23a1 1 0 0 0 1.414-1.414l-5.23-5.23A8.5 8.5 0 0 0 10.5 2zm0 2a6.5 6.5 0 1 1 0 13 6.5 6.5 0 0 1 0-13z"/>
