@@ -17,10 +17,9 @@ class SelectElement extends LitElement {
         .custom-select {
             position: relative;
             display: inline-block;
-            width: auto;
         }
         
-        .custom-select.fullfield {
+        .custom-select.fulfilled {
             min-width: 260px;
         }
 
@@ -35,7 +34,7 @@ class SelectElement extends LitElement {
             color: var(--text-color);
         }
 
-        .select-selected.fullfield {
+        .select-selected.fulfilled {
             background: var(--primary-color);
             border: 1px solid var(--surface-color);
             color: var(--surface-color);
@@ -46,7 +45,6 @@ class SelectElement extends LitElement {
             position: absolute;
             background-color: var(--surface-color);
             border: 1px solid var(--surface-color);
-            width: 100%;
             z-index: 99;
             list-style: none;
             margin: 0;
@@ -83,7 +81,7 @@ class SelectElement extends LitElement {
             fill: var(--text-color);
         }
 
-        .icon.fullfield > svg {
+        .icon.fulfilled > svg {
             fill: var(--surface-color);
         }
     `;
@@ -115,10 +113,10 @@ class SelectElement extends LitElement {
 
     render() {
         return html`
-          <div class="custom-select ${this.selectedOption ? "fullfield" : ""}">
-            <div class="select-selected ${this.selectedOption ? "fullfield" : ""}" @click="${this.toggleOptions}">
+          <div class="custom-select ${this.selectedOption ? "fulfilled" : ""}">
+            <div class="select-selected ${this.selectedOption ? "fulfilled" : ""}" @click="${this.toggleOptions}">
               <p>${this.label}${this.selectedOption ? `: ${this.selectedOption}` : ''}</p>
-              <div class="icon ${this.selectedOption ? "fullfield" : ""}">
+              <div class="icon ${this.selectedOption ? "fulfilled" : ""}">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   height="24"
