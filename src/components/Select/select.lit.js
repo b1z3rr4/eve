@@ -41,7 +41,8 @@ class SelectElement extends LitElement {
         }
 
         .select-options {
-            display: none;
+            display: block;
+            visibility: hidden;
             position: absolute;
             background-color: var(--surface-color);
             border: 1px solid var(--surface-color);
@@ -54,7 +55,7 @@ class SelectElement extends LitElement {
         }
 
         .select-options.open {
-            display: block;
+            visibility: visible;
         }
 
         .select-options li {
