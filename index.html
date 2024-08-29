@@ -12,6 +12,21 @@
     <eve-header>
         <eve-search slot="actions" location=""></eve-search>
     </eve-header>
+
+    <main>
+        <h2 class="home-title">Eventos perto de você</h2>
+    
+        <eve-select label="Qualquer tipo">
+            <eve-option value="Presencial"></eve-option>
+            <eve-option value="Remoto"></eve-option>
+        </eve-select>
+        <eve-select label="Classificar por" selectedOption="Distância">
+            <eve-option value="Distância"></eve-option>
+            <eve-option value="Relevância"></eve-option>
+            <eve-option value="Mais Recentes"></eve-option>
+        </eve-select>
+    </main>
+
 </body>
 
 </html>

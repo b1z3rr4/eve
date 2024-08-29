@@ -13,7 +13,7 @@ async function getGeolocation() {
                     }
                 },
                 (error) => {
-                    reject(new Error('Erro ao obter a localização: ' + error.message));
+                    reject(new Error('Erro ao obter a localização.'));
                 },
                 {
                     enableHighAccuracy: true, // Melhor precisão
@@ -23,7 +23,7 @@ async function getGeolocation() {
             );
         });
     } else {
-        throw new Error('Geolocation não é suportado pelo navegador.');
+        alert('Geolocation não é suportado pelo navegador.'); // Snackbar/Toast
     }
 }
 
@@ -31,17 +31,17 @@ async function getPostalCode(latitude, longitude) {
     try {
         const response = await fetch(`https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json&addressdetails=1`);
         if (!response.ok) {
-            throw new Error('Erro na resposta da API.');
+            alert('Erro na resposta da API.');
         }
         const data = await response.json();
 
         if (data && data.address && data.address.postcode) {
             return data.address.postcode;
         } else {
-            throw new Error('CEP não encontrado.');
+            alert('CEP não encontrado.');
         }
     } catch (error) {
-        throw new Error('Erro ao buscar o CEP: ' + error.message);
+        alert('Erro ao buscar o CEP.');
     }
 }
 
@@ -49,18 +49,18 @@ async function getCityAndStateFromCep(cep) {
     try {
         const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
         if (!response.ok) {
-            throw new Error('Erro na resposta da API.');
+            alert('Erro na resposta da API.');
         }
         const data = await response.json();
 
         if (data.erro) {
-            throw new Error('CEP não encontrado.');
+            alert('CEP não encontrado.');
         }
 
         const { localidade: cidade, uf: estado } = data;
         return { cidade, estado };
     } catch (error) {
-        throw new Error('Erro ao buscar cidade e estado: ' + error.message);
+        alert('Erro ao buscar cidade e estado.');
     }
 }
 
