@@ -17,6 +17,8 @@ class SelectElement extends LitElement {
         .custom-select {
             position: relative;
             display: inline-block;
+            min-width: 120px;
+            width: auto;
         }
         
         .custom-select.fulfilled {
@@ -50,6 +52,7 @@ class SelectElement extends LitElement {
             list-style: none;
             margin: 0;
             padding: 0;
+            min-width: 100%;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
         }
