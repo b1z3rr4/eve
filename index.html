@@ -1,32 +1,50 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!doctype html>
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./src/index.css" />
 
-    <link rel="stylesheet" href="./src/styles/main.css">
+  <script type="module" src="./src/main.ts"></script>
+
+  <title>Eve</title>
+
+  <!-- COMPONENTS -->
+  <script type="module" src="./src/components/Header/header.element.ts"></script>
+  <script type="module" src="./src/components/Search/search.element.ts"></script>
+  <script type="module" src="./src/components/Select/select.element.ts"></script>
+  <script type="module" src="./src/components/Option/option.element.ts"></script>
+  <script type="module" src="./src/components/Calendar/calendar.element.ts"></script>
+  <script type="module" src="./src/components/Card/root.element.ts"></script>
+  <script type="module" src="./src/components/Card/img.element.ts"></script>
+  <script type="module" src="./src/components/Card/content.element.ts"></script>
 </head>
 
 <body>
-    <eve-header>
-        <eve-search slot="actions" location=""></eve-search>
-    </eve-header>
+  <eve-header>
+    <eve-search slot="actions" location=""></eve-search>
+  </eve-header>
 
-    <main>
-        <h2 class="home-title">Eventos perto de você</h2>
-        <eve-calendar label="Data"></eve-calendar>
-        <eve-select label="Tipo">
-            <eve-option value="Presencial"></eve-option>
-            <eve-option value="Remoto"></eve-option>
-        </eve-select>
-        <eve-select label="Classificar por" selectedOption="Distância">
-            <eve-option value="Distância"></eve-option>
-            <eve-option value="Relevância"></eve-option>
-            <eve-option value="Mais Recentes"></eve-option>
-        </eve-select>
-    </main>
+  <main id="main">
+    <section id="filters">
+      <eve-calendar label="Data"></eve-calendar>
 
+      <eve-select label="Tipo">
+        <eve-option value="Presencial"></eve-option>
+        <eve-option value="Remoto"></eve-option>
+      </eve-select>
+
+      <eve-select label="Classificar por" selectedOption="Distância">
+        <eve-option value="Distância"></eve-option>
+        <eve-option value="Relevância"></eve-option>
+        <eve-option value="Mais Recentes"></eve-option>
+      </eve-select>
+    </section>
+
+    <section id="events"></section>
+  </main>
 </body>
 
 </html>
